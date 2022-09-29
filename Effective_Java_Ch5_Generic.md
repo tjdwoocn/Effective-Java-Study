@@ -8,7 +8,7 @@
 
     <br>
     
-Generic 설명도
+**Generic 설명도**
 
 ![Generic 설명도](./java_img/screenshot01.png)
 
@@ -21,7 +21,7 @@ Generic 설명도
     <br>
 
 - Generic이 없을때의 예시
-![Generic이 없을때의 예시](./java_img/screenshot02.png)(360*120)
+![Generic이 없을때의 예시](./java_img/screenshot02.png)
 
 
 - Generic이 없을때의 문제점
@@ -176,13 +176,16 @@ public static void main(String[] args) {
 
     <br>
 
+
 ### <u>예외: 로 타입이 허용되는 경우</u>
+
 1. **class 리터럴에는 로 타입을 써야 한다**
     - List.class, String[].class, int.class는 허용되지만, List<String>.class, List<?>, class는 허용하지 않는다.
     
     <br>
  
 2. **instanceof 연산자는 비한정적 와일드카드 타입 이외의 매개변수화 타입에는 적용할 수 없다**
+    
     - 런타임에는 제네릭 타입이 지워지기 때문이고
     
     - 로 타입이든 비한정적 와일드카드 타입이든 instanceof는 완전히 똑같이 동작함
@@ -193,6 +196,7 @@ public static void main(String[] args) {
         Set<?> s = (Set<?>) o;    // 와일드카드 타입
     }
     ```
+
 
     <br>
 
@@ -212,11 +216,13 @@ public static void main(String[] args) {
 ---
 
 ### <u>배열과 제네릭의 차이점</u>
-1. 배열은 공변(covariant), 함께 변한다. 하지만 제네릭은 불공변(invariant), 함께 변하지 않는다.
+1. **배열은 공변(covariant), 함께 변한다. 하지만 제네릭은 불공변(invariant), 함께 변하지 않는다.**
 
     - 배열: Sub가 Super의 하위타입이면, Sub[]는 Super[]의 하위타입임
 
     - 제네릭: `List<Sub>`는 `List<Super>` 의 하위타입도, 상위타입도 아님
+
+    <br>
 
 - 둘의 차이는 에러 발생 시점에 있음
 
@@ -231,8 +237,9 @@ public static void main(String[] args) {
     ol.add("타입이 달라 넣을 수 없다.");  
     ```
 
+    <br>
 
-2. 배열은 실체화(reify) 된다 
+2. **배열은 실체화(reify) 된다**
 
     - 배열은 런타임 시점에도 자신이 담기로 한 원소의 타입인지를 확인함
 
