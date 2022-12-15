@@ -295,7 +295,7 @@ Connection conn = getConnection(dataSource).orElseGet(() -> getLocalConn());
 - 전제조건과 사후조건 뿐만 아니라 부작용도 문서화해야 함
     - 부작용은 사후 조건으로 명확히 나타나지는 않지만 시스템의 상태에 어떠한 변화를 가져오는 것을 의미함
 
-<img src='./imgs/javadoc_ex.png'>
+<img src='./java_img/javadoc_ex.png'>
         
 <br>
 
