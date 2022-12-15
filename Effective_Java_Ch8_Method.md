@@ -359,7 +359,5 @@ Connection conn = getConnection(dataSource).orElseGet(() -> getLocalConn());
     
 ### 정리
 
-- 문서화 주석은 API를 문서화하는 가장 효과적인 방법이므로 공개 API라면 빠짐없이 설명을 달아야 하고
+- **문서화 주석은 API를 문서화하는 가장 효과적인 방법**이므로 공개 API라면 빠짐없이 설명을 달아야 하고
 - 문서화 주석에 임의의 HTML 태그를 사용할 수 있음. 단, HTML 메타 문자는 특별하게 취급해야 한다
-
-**문서화 주석은 API를 문서화하는 가장 좋은 방법!**
