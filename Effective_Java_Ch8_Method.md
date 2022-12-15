@@ -295,6 +295,8 @@ Connection conn = getConnection(dataSource).orElseGet(() -> getLocalConn());
 - 전제조건과 사후조건 뿐만 아니라 부작용도 문서화해야 함
     - 부작용은 사후 조건으로 명확히 나타나지는 않지만 시스템의 상태에 어떠한 변화를 가져오는 것을 의미함
 
+<img src='./imgs/javadoc_ex.png'>
+        
 <br>
 
 ### 태그 작성 가이드
@@ -359,5 +361,7 @@ Connection conn = getConnection(dataSource).orElseGet(() -> getLocalConn());
     
 ### 정리
 
-- **문서화 주석은 API를 문서화하는 가장 효과적인 방법**이므로 공개 API라면 빠짐없이 설명을 달아야 하고
+- **문서화 주석은 API를 문서화하는 가장 효과적인 방법**이므로
+- 공개 API라면 빠짐없이 설명을 달아야 하고
+- 표준 규약을 일관되게 지켜야 하며
 - 문서화 주석에 임의의 HTML 태그를 사용할 수 있음. 단, HTML 메타 문자는 특별하게 취급해야 한다
